@@ -1,5 +1,6 @@
 class Dose < ActiveRecord::Base
   belongs_to :cocktail, inverse_of: :doses
+  # you cannot have a dose without a cocktail
   belongs_to :ingredient
 
   validates_presence_of :quantity

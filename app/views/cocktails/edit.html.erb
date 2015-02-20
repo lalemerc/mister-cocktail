@@ -1,8 +1,7 @@
 <h1>Editing Cocktail</h1>
-
 <!--<%= render 'form' %>-->
 <%= simple_form_for(@cocktail) do |f| %>
-  <% if @cocktail.errors.any? %>
+<% if @cocktail.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@cocktail.errors.count, "error") %> prohibited this cocktail from being saved:</h2>
 
@@ -21,7 +20,6 @@
     <%= f.submit %>
   </div>
 <% end %>
-
 
 
 <%= link_to 'Show', @cocktail %> |
