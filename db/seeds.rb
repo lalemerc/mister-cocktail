@@ -5,3 +5,16 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+10.times do
+  Cocktail.create(
+    name:Faker::Name.name)
+end
+
+ingredients = Ingredient.create([{name: 'mint'}, {name: 'sugar'}, {name: 'rhum'}, {name: 'gin'}, {name: 'lemon'}, {name: 'tonic'}])
+
+100.times do
+  Dose.create(
+    quantity:Faker::Number.number(2),
+    ingredient:Ingredient.all.to_a.sample,
+    cocktail:Cocktail.all.to_a.sample)
+end

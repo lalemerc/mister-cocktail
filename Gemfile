@@ -1,6 +1,15 @@
 source 'https://rubygems.org'
 
+gem 'bootstrap-sass', '~> 3.3.3'
+gem 'font-awesome-sass'
+gem 'simple_form'
+gem "nested_form"
 
+ruby '2.2.0'
+gem 'rails_12factor', group: :production
+gem 'puma',           group: :production
+
+gem 'faker'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use postgresql as the database for Active Record

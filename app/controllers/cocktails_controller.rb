@@ -15,6 +15,8 @@ class CocktailsController < ApplicationController
   # GET /cocktails/new
   def new
     @cocktail = Cocktail.new
+    @cocktail.doses.build
+    # on creee une dose basée sur le cocktail (nested form)
   end
 
   # GET /cocktails/1/edit
@@ -69,6 +71,7 @@ class CocktailsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cocktail_params
-      params.require(:cocktail).permit(:name)
+      params.require(:cocktail).permit(:name, doses_attributes: [:quantity, :ingredient_id])
+      # longer bc of nested form
     end
 end

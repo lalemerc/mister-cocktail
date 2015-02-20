@@ -1,7 +1,8 @@
+
 Rails.application.routes.draw do
   resources :doses
 
-  resources :ingredients
+  resources :ingredients, except: [:create]
 
   resources :cocktails
 
@@ -9,7 +10,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+   root 'cocktails#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

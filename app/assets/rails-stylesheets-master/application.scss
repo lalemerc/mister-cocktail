@@ -1,0 +1,43 @@
+// Graphical variables
+@import "config/variables";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Your CSS
+@import "layout/index";
+@import "components/index";
+@import "pages/index";
+@import "vendor/index";
+
+body{
+  margin:20px 0px;
+  margin: auto;
+  width: 700px;
+}
+
+table{
+  width: 100%;
+}
+td{
+  padding: 5px 10px;
+}
+th{
+  padding: 5px 10px;
+  background-color: #DDDDDD;
+}
+
+h1{
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  color: #ffffff;
+  background-color: #628FAD;
+  border-color: #D3E0E8;
+}
